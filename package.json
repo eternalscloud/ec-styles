@@ -1,0 +1,49 @@
+{
+  "name": "@eternals/styles",
+  "version": "1.0.0",
+  "description": "Eternals Cloud Styles package with design system, color palettes, typography, buttons, forms, and theming utilities",
+  "type": "module",
+  "main": "dist/index.css",
+  "style": "dist/index.css",
+  "scss": "src/index.scss",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,json}\"",
+    "publishonly": "npm run build"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "design-system",
+    "ui-components",
+    "color-palette",
+    "typography",
+    "buttons",
+    "forms",
+    "theming",
+    "design-tokens",
+    "utility-classes",
+    "responsive",
+    "modern-ui",
+    "eternals"
+  ],
+  "author": "Chandra Sekhar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eternals-cloud/styles.git"
+  },
+  "homepage": "https://github.com/eternals-cloud/styles#readme",
+  "bugs": {
+    "url": "https://github.com/eternals-cloud/styles/issues"
+  },
+  "devDependencies": {
+    "sass": "1.92.1",
+    "vite": "7.1.2",
+    "prettier": "3.6.2"
+  }
+}
