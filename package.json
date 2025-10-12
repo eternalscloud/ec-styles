@@ -1,7 +1,7 @@
 {
-  "name": "@eternals/styles",
+  "name": "@eternaljs/styles",
   "version": "1.0.0",
-  "description": "Eternals Cloud Styles package with design system, color palettes, typography, buttons, forms, and theming utilities",
+  "description": "Eternals JS Styles package with design system, color palettes, typography, buttons, forms, and theming utilities",
   "type": "module",
   "main": "dist/index.css",
   "style": "dist/index.css",
@@ -42,8 +42,12 @@
     "url": "https://github.com/eternals-cloud/styles/issues"
   },
   "devDependencies": {
-    "sass": "1.92.1",
-    "vite": "7.1.2",
-    "prettier": "3.6.2"
+    "prettier": "3.6.2",
+    "sass": "1.93.2",
+    "vite": "7.1.9"
+  },
+  "dependencies": {
+    "@eternals/font-manrope": "1.0.0",
+    "@eternals/font-poppins": "1.0.0"
   }
 }
