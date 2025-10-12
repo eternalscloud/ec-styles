@@ -1,37 +1,51 @@
 {
   "name": "@eternaljs/styles",
-  "version": "1.0.0",
-  "description": "Eternals JS Styles package with design system, color palettes, typography, buttons, forms, and theming utilities",
+  "version": "0.0.1",
+  "description": "A comprehensive design system and styling package for Eternals JS applications. Features complete color palettes, typography system, spacing utilities, theming capabilities, and modern CSS custom properties.",
   "type": "module",
   "main": "dist/index.css",
   "style": "dist/index.css",
   "scss": "src/index.scss",
   "files": [
-    "dist/"
+    "dist/",
+    "src/",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "vite build",
     "dev": "vite",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,json}\"",
-    "publishonly": "npm run build"
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,scss,json}\"",
+    "prepublishOnly": "npm run build",
+    "unpublish": "npm unpublish -f @eternaljs/styles",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "keywords": [
     "css",
     "scss",
     "design-system",
-    "ui-components",
     "color-palette",
     "typography",
-    "buttons",
-    "forms",
     "theming",
     "design-tokens",
     "utility-classes",
     "responsive",
     "modern-ui",
-    "eternals"
+    "eternals",
+    "css-variables",
+    "custom-properties",
+    "spacing-system",
+    "light-dark-theme",
+    "poppins",
+    "manrope",
+    "css-framework"
   ],
-  "author": "Chandra Sekhar",
+  "author": {
+    "name": "Chandra Sekhar",
+    "email": "chandra@eternals.cloud",
+    "url": "https://github.com/eternals-cloud"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -41,13 +55,20 @@
   "bugs": {
     "url": "https://github.com/eternals-cloud/styles/issues"
   },
+  "dependencies": {
+    "@eternals/font-manrope": "1.0.0",
+    "@eternals/font-poppins": "1.0.0"
+  },
   "devDependencies": {
     "prettier": "3.6.2",
     "sass": "1.93.2",
     "vite": "7.1.9"
   },
-  "dependencies": {
-    "@eternals/font-manrope": "1.0.0",
-    "@eternals/font-poppins": "1.0.0"
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
