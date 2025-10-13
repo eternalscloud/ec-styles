@@ -1,0 +1,47 @@
+.p-inputgroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+        outline: 0;
+        border: 1px solid var(--primary-600);
+        box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--primary-600) 25%, transparent);
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    &-addon {
+        border: none;
+        border-radius: 0px;
+    }
+
+    >.p-inputtext {
+        border-radius: 0px var(--radius-md) var(--radius-md) 0px;
+        border: none;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        >.p-focus {
+            box-shadow: none;
+        }
+    }
+
+    >.p-button {
+        border-radius: 0px;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        >.p-focus {
+            box-shadow: none;
+        }
+    }
+}

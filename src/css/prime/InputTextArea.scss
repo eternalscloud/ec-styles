@@ -1,0 +1,9 @@
+.p-inputtextarea{
+    padding: var(--padding-rg);
+    border-radius: var(--radius-md);
+
+    &::placeholder {
+        color: var(--gray-400);
+        user-select: none;
+    }
+}

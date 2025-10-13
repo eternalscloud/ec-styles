@@ -1,0 +1,30 @@
+.p-listbox {
+    padding: 0px;
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+        outline: 0;
+    }
+
+    &-list {
+        padding: 0px;
+        margin: var(--margin-xxs);
+        overflow: hidden;
+
+        &:focus,
+        &:focus-within,
+        &:focus-visible {
+            outline: 0;
+        }
+
+    }
+
+    &-item {
+        border-radius: var(--radius-rg);
+        overflow: hidden;
+        padding: var(--padding-rg) var(--padding-md);
+    }
+}
