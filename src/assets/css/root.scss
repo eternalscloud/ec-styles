@@ -1,13 +1,27 @@
 @use 'color.scss';
 @use 'font.scss';
 @use 'theme.scss';
+@use 'button.scss';
+@use 'calendar.scss';
+@use 'chips.scss';
+@use 'radio-button.scss';
+@use 'list-box.scss';
+@use 'input-checkbox.scss';
+@use 'input-dropdown.scss';
+@use 'input-editor.scss';
+@use 'input-group.scss';
+@use 'input-multi-select.scss';
+@use 'input-number.scss';
+@use 'input-otp.scss';
+@use 'input-password.scss';
+@use 'input-radio-button.scss';
+@use 'input-switch.scss';
+@use 'input-text.scss';
+@use 'input-text-area.scss';
 @use 'overrides.scss';
-@import "@eternals/font-poppins/dist/index.css";
-@import "@eternals/font-manrope/dist/index.css";
 
 :root {
-  --footer-small: 50px;
-  --footer-large: 240px;
+  --footer-width: 240px;
 
   --padding-xxs: 2px;
   --padding-xs: 4px;

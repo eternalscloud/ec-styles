@@ -1,0 +1,362 @@
+.p-datepicker {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+  padding: var(--padding-xs);
+  box-shadow: var(--shadow-md);
+
+  &-header {
+    border-bottom: 1px solid var(--gray-200);
+    padding: var(--padding-xs);
+    padding-bottom: 0px;
+  }
+
+  &-title {
+    font-size: var(--fs-sm);
+  }
+
+  &-prev {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-md);
+
+    &:hover {
+      background-color: var(--primary-100);
+    }
+  }
+
+  &-next {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-md);
+
+    &:hover {
+      background-color: var(--primary-100);
+    }
+  }
+
+  &-month {
+    margin-right: var(--margin-xxs);
+  }
+
+  &-year {
+    margin-left: var(--margin-xxs);
+  }
+
+  &-calendar-container {
+    padding: var(--padding-xs) var(--padding-sm);
+  }
+
+  &-group {
+    max-width: 280px;
+
+    &-container {
+      padding: 0px;
+    }
+  }
+
+  &-calendar {
+    margin: 0px;
+
+    > thead > tr > th,
+    > tbody > tr > td {
+      vertical-align: middle;
+      text-align: center;
+      padding: var(--padding-xxs);
+    }
+
+    td > span {
+      width: 30px;
+      height: 30px;
+      border-radius: var(--radius-md);
+
+      &:hover {
+        background-color: var(--primary-100);
+      }
+    }
+
+    > thead > tr > th {
+      color: var(--gray-600);
+      font-weight: var(--fw-semibold);
+    }
+  }
+
+  &-buttonbar {
+    padding: var(--padding-xs) var(--padding-sm);
+    font-size: var(--fs-xs);
+
+    > button {
+      border-radius: var(--radius-rg);
+      padding: var(--padding-xxs) var(--padding-rg);
+
+      &[aria-label='Today'],
+      &[aria-label='Now'] {
+        color: var(--primary-600);
+        background-color: transparent;
+        border: none;
+
+        &:hover {
+          background-color: var(--primary-100);
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        > .p-focus {
+          box-shadow: none;
+        }
+      }
+
+      &[aria-label='Clear'] {
+        color: var(--gray-500);
+        background-color: transparent;
+        border: none;
+
+        > span {
+          font-weight: var(--fw-normal);
+        }
+
+        &:hover {
+          color: var(--primary-600);
+          background-color: transparent;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        > .p-focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  &-daypicker {
+    width: 252px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    margin-top: var(--margin-xs);
+
+    > .p-overlaypanel-content {
+      padding: var(--padding-sm);
+      overflow: hidden;
+    }
+
+    &-header {
+      padding: var(--padding-xs) 0px var(--padding-rg) 0px;
+      border-bottom: 1px solid var(--gray-200);
+      margin-bottom: var(--margin-sm);
+
+      &-title {
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-medium);
+        text-align: center;
+      }
+    }
+
+    &-items {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      width: 30px;
+      height: 30px;
+      margin: var(--margin-xxs);
+      border-radius: var(--radius-rg);
+      cursor: pointer;
+      border: 1px solid var(--gray-200);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--padding-xs);
+      white-space: nowrap;
+
+      &-title {
+        font-size: var(--fs-xs);
+        line-height: var(--lh-none);
+      }
+
+      &-text {
+        font-size: 0.6rem;
+        margin-top: 1px;
+        font-weight: var(--fw-medium);
+        color: var(--gray-400);
+      }
+
+      &:hover {
+        background-color: var(--primary-100);
+      }
+
+      &[ec-calendar-hour-highlight='true'] {
+        color: var(--primary-600);
+        border-color: var(--gray-300);
+        background-color: var(--gray-300);
+
+        > .ec-calendar-daypicker-item-text {
+          color: var(--gray-500);
+        }
+      }
+
+      &[aria-selected='true'] {
+        color: var(--white-color);
+        border-color: var(--primary-600);
+        background-color: var(--primary-600);
+
+        > .ec-calendar-daypicker-item-text {
+          color: var(--gray-200);
+        }
+      }
+    }
+  }
+
+  .p-highlight {
+    background-color: var(--primary-600);
+    color: var(--white-color);
+
+    &:hover {
+      background-color: var(--primary-100);
+      color: var(--primary-600);
+    }
+  }
+}
+
+.p-monthpicker {
+  padding: var(--padding-sm) var(--padding-rg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &-month {
+    max-width: 50px;
+    margin: var(--margin-xxs);
+    padding: var(--padding-sm) var(--padding-rg);
+  }
+}
+
+.p-yearpicker {
+  padding: var(--padding-sm) var(--padding-rg);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  &-year {
+    max-width: 80px;
+    margin: var(--margin-xxs);
+    padding: var(--padding-sm) var(--padding-rg);
+  }
+}
+
+.p-timepicker {
+  padding: var(--padding-sm) var(--padding-rg);
+
+  button {
+    width: 24px;
+    height: 20px;
+    padding: var(--padding-xxs) var(--padding-xs);
+    border-radius: var(--radius-rg);
+
+    &:hover {
+      background-color: var(--primary-100);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  span {
+    font-size: var(--fs-rg);
+  }
+
+  > .p-separator {
+    margin: 0px var(--margin-xs);
+  }
+}
+
+.p-calendar:not(.p-calendar-disabled).p-focus > .p-inputtext {
+  border: 1px solid var(--primary-600);
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--primary-600) 25%, transparent);
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.p-datepicker table td > span,
+.p-datepicker:not(.p-disabled) table td span:not(.p-highlight):not(.p-disabled),
+.p-datepicker:not(.p-disabled) .p-yearpicker .p-yearpicker-year:not(.p-disabled),
+.p-datepicker:not(.p-disabled) .p-monthpicker .p-monthpicker-month:not(.p-disabled) {
+  &:focus {
+    border: none;
+    box-shadow: 0 0 0 0.15rem color-mix(in srgb, var(--primary-600) 25%, transparent);
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.p-calendar-w-btn-right {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition:
+    border 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+
+  &:focus-within {
+    box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--primary-600) 25%, transparent);
+  }
+
+  > .p-inputtext {
+    border: 1px solid var(--gray-200);
+    border-right: none;
+    border-radius: var(--radius-md) 0px 0px var(--radius-md);
+
+    &:hover {
+      border: 1px solid var(--primary-600);
+      border-right: none;
+    }
+
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  > .p-datepicker-trigger {
+    border-radius: 0px;
+    border: none;
+    border: 0px;
+    border-left: none;
+
+    &:hover {
+      border: 0px;
+    }
+
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &.p-focus {
+    > .p-inputtext {
+      border-right: 0px !important;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.p-inputnumber {
+  &-input {
+    border-radius: var(--radius-md);
+  }
+
+  &-buttons-stacked {
+    > .p-inputnumber-button-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 0px var(--radius-md) var(--radius-md) 0px;
+
+      > .p-inputnumber-button {
+        padding: 0px;
+
+        &-up {
+          border-radius: 0px var(--radius-md) 0px 0px;
+        }
+
+        &-down {
+          border-radius: 0px 0px var(--radius-md) 0px;
+        }
+      }
+    }
+
+    > .p-inputnumber-input,
+    > .p-inputtext {
+      border-radius: var(--radius-md) 0px 0px var(--radius-md);
+      border-right: 0px;
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      > .p-focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &-buttons-vertical {
+    > .p-inputnumber-input {
+      border-radius: 0px;
+      border-top: 0px;
+      border-bottom: 0px;
+    }
+
+    > .p-inputnumber-button {
+      padding: var(--padding-sm);
+
+      &-up {
+        border-radius: var(--radius-md) var(--radius-md) 0px 0px;
+      }
+
+      &-down {
+        border-radius: 0px 0px var(--radius-md) var(--radius-md);
+      }
+    }
+
+    > .p-inputnumber-input,
+    > .p-inputtext {
+      &:focus {
+        box-shadow: none;
+      }
+
+      > .p-focus {
+        box-shadow: none;
+      }
+    }
+  }
+}

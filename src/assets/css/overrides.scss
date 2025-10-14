@@ -1,0 +1,24 @@
+.p-focus {
+  outline: none;
+  outline-offset: 0;
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--primary-600) 25%, transparent);
+  border-radius: var(--radius-md);
+}
+
+.p-disabled {
+  user-select: none;
+  cursor: not-allowed;
+}
+
+.p-hidden-accessible {
+  input {
+    &:hover {
+      border: none;
+    }
+  }
+}
+
+.p-inputwrapper-focus {
+  @extend .p-focus;
+}

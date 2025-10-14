@@ -1,0 +1,35 @@
+.p-chips {
+  &-multiple-container {
+    padding: var(--padding-xs);
+  }
+
+  &-token {
+    background-color: var(--primary-200);
+    color: var(--primary-600);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    padding: var(--padding-xxs) var(--padding-xs);
+    margin: 1px;
+    font-size: var(--fs-xs);
+
+    &:hover {
+      border-color: var(--primary-700);
+    }
+
+    &:active {
+      border-color: var(--primary-600);
+    }
+
+    &-icon {
+      border-radius: var(--radius-rg);
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &-input-token {
+    padding: var(--padding-xs);
+  }
+}

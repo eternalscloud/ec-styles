@@ -1,0 +1,82 @@
+.p-hourpicker {
+  max-width: 280px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+  margin-top: var(--margin-xs);
+
+  > .p-overlaypanel-content {
+    padding: var(--padding-sm);
+    overflow: hidden;
+  }
+
+  &-header {
+    padding: var(--padding-rg);
+    border-bottom: 1px solid var(--gray-200);
+    margin-bottom: var(--margin-sm);
+
+    &-title {
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-semibold);
+      text-align: center;
+    }
+  }
+
+  &-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    width: 38px;
+    height: 38px;
+    margin: var(--margin-xxs);
+    border-radius: var(--radius-rg);
+    cursor: pointer;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-xs);
+    white-space: nowrap;
+
+    &-title {
+      font-size: var(--fs-xs);
+      line-height: var(--lh-none);
+    }
+
+    &-text {
+      font-size: 0.6rem;
+      margin-top: 1px;
+      font-weight: var(--fw-medium);
+      color: var(--gray-400);
+    }
+
+    &:hover {
+      background-color: var(--primary-100);
+    }
+
+    &[ec-calendar-hour-highlight='true'] {
+      color: var(--primary-600);
+      border-color: var(--gray-300);
+      background-color: var(--gray-300);
+
+      > .ec-calendar-hourpicker-item-text {
+        color: var(--gray-500);
+      }
+    }
+
+    &[aria-selected='true'] {
+      color: var(--white-color);
+      border-color: var(--primary-600);
+      background-color: var(--primary-600);
+
+      > .ec-calendar-hourpicker-item-text {
+        color: var(--gray-200);
+      }
+    }
+  }
+}

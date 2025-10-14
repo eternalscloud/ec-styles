@@ -1,0 +1,26 @@
+.p-radiobutton {
+  width: 20px;
+  height: 20px;
+
+  &-box {
+    width: 20px;
+    height: 20px;
+    border-color: var(--primary-600);
+    transition: border-color 0.5s ease;
+
+    &:hover {
+      border-color: var(--primary-600);
+    }
+  }
+
+  &[data-p-checked='true'] & {
+    &-box {
+      background-color: var(--primary-600);
+      transition: background-color 0.5s ease;
+
+      &:hover {
+        border-color: var(--primary-600);
+      }
+    }
+  }
+}

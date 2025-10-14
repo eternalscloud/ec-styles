@@ -109,9 +109,9 @@
   --neutral-500: #262626;
   --neutral-600: #0a0a0a;
   --neutral-700: #383838;
-  --neutral-800: #171717;
-  --neutral-900: #0a0a0a;
-  --neutral-950: #0a0a0a;
+  --neutral-800: #1d1d1d;
+  --neutral-900: #171717;
+  --neutral-950: #070707;
 
   --rose-50: #fff1f2;
   --rose-100: #ffe4e6;
@@ -125,3 +125,16 @@
   --rose-900: #881337;
   --rose-950: #4c0519;
 }
+
+// Color shade mapping:
+// 50 → ultra-light
+// 100 → lightest
+// 200 → light
+// 300 → highlight
+// 400 → medium-light
+// 500 → accent
+// 600 → base
+// 700 → dark
+// 800 → darker
+// 900 → darkest
+// 950 → ultra-dark

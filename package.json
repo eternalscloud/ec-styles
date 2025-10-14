@@ -1,6 +1,6 @@
 {
   "name": "@eternaljs/styles",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A comprehensive design system and styling package for Eternals JS applications. Features complete color palettes, typography system, spacing utilities, theming capabilities, and modern CSS custom properties.",
   "type": "module",
   "main": "dist/index.css",
@@ -56,13 +56,20 @@
     "url": "https://github.com/eternals-cloud/styles/issues"
   },
   "dependencies": {
-    "@eternals/font-manrope": "1.0.0",
-    "@eternals/font-poppins": "1.0.0"
+    "moment-timezone": "0.6.0",
+    "primeflex": "4.0.0",
+    "primeicons": "7.0.0",
+    "primereact": "10.9.7",
+    "quill": "2.0.3",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "sass": "1.93.2",
+    "zod": "4.1.12"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "5.0.4",
     "prettier": "3.6.2",
-    "sass": "1.93.2",
-    "vite": "7.1.9"
+    "vite": "7.1.10"
   },
   "engines": {
     "node": ">=16.0.0",
