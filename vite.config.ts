@@ -1,16 +1,34 @@
 import react from '@vitejs/plugin-react';
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig } from 'vite';
+import { resolve } from 'path';
+import dts from 'vite-plugin-dts';
 
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd());
-  return {
-    plugins: [react()],
-    server: {
-      host: env.VITE_HOST || '0.0.0.0',
-      port: parseInt(env.VITE_PORT || '3100'),
+export default defineConfig({
+  plugins: [
+    react(),
+    dts({ include: ['src/**/*'] })
+  ],
+  build: {
+    lib: {
+      entry: resolve(__dirname, 'src/index.ts'),
+      name: 'EternalStyles',
+      fileName: 'index',
+      formats: ['es', 'cjs']
     },
-    optimizeDeps: {
-      include: ['primereact/editor', 'primereact/api', 'primereact/button', 'primereact/inputtext'],
+    rollupOptions: {
+      external: ['react', 'react-dom', 'primereact', 'moment-timezone'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+          primereact: 'PrimeReact',
+          'moment-timezone': 'moment'
+        }
+      }
     },
-  };
+    cssCodeSplit: false
+  },
+  optimizeDeps: {
+    include: ['primereact/editor', 'primereact/api', 'primereact/button', 'primereact/inputtext'],
+  },
 });

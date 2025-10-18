@@ -3,9 +3,20 @@
   "version": "0.0.3",
   "description": "A comprehensive design system and styling package for Eternals JS applications. Features complete color palettes, typography system, spacing utilities, theming capabilities, and modern CSS custom properties.",
   "type": "module",
-  "main": "dist/index.css",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "style": "dist/index.css",
   "scss": "src/index.scss",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./styles": "./dist/index.css",
+    "./scss": "./src/index.scss"
+  },
   "files": [
     "dist/",
     "src/",
@@ -14,7 +25,6 @@
   ],
   "scripts": {
     "build": "vite build",
-    "dev": "vite",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,json}\"",
     "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,scss,json}\"",
     "prepublishOnly": "npm run build",
@@ -67,9 +77,14 @@
     "zod": "4.1.12"
   },
   "devDependencies": {
+    "@types/node": "24.6.0",
+    "@types/react": "19.1.16",
+    "@types/react-dom": "19.1.9",
     "@vitejs/plugin-react": "5.0.4",
     "prettier": "3.6.2",
-    "vite": "7.1.10"
+    "typescript": "^5.0.0",
+    "vite": "7.1.10",
+    "vite-plugin-dts": "^3.0.0"
   },
   "engines": {
     "node": ">=16.0.0",
