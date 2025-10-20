@@ -33,6 +33,10 @@
         box-shadow: none;
       }
 
+      &:hover {
+        border-right: 0px;
+      }
+
       > .p-focus {
         box-shadow: none;
       }
@@ -60,7 +64,17 @@
 
     > .p-inputnumber-input,
     > .p-inputtext {
-      &:focus {
+      &:hover {
+        border-top: 0px;
+        border-bottom: 0px;
+      }
+
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        outline: 0;
+        border-top: none;
+        border-bottom: none;
         box-shadow: none;
       }
 

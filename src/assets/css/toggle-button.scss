@@ -1,0 +1,17 @@
+.p-togglebutton-input {
+  .p-button-icon-left {
+    color: var(--white-color);
+
+    &:before {
+      color: var(--white-color);
+    }
+  }
+
+  .p-button-icon-right {
+    color: var(--white-color);
+
+    &::before {
+      color: var(--white-color);
+    }
+  }
+}

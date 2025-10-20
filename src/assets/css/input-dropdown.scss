@@ -54,9 +54,11 @@
   }
 
   &-panel {
-    border-radius: var(--radius-md);
     overflow: hidden;
+    border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    background-color: var(--white-color);
   }
 
   &-header {
@@ -70,12 +72,13 @@
 
   &-items {
     padding: var(--padding-xs);
+    margin-bottom: 0px;
   }
 
   &-item {
     font-size: var(--fs-xs);
     border-radius: var(--radius-rg);
-    padding: var(--padding-xs) var(--padding-xs);
+    padding: var(--padding-sm);
 
     &:focus-visible,
     &-label:focus-visible {

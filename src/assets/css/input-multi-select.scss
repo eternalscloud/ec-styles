@@ -40,11 +40,12 @@
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
   }
 
   &-header {
-    background-color: var(--primary-100);
-    padding: var(--padding-xs) var(--padding-rg);
+    background-color: var(--primary-50);
+    padding: var(--padding-xxs) var(--padding-rg);
   }
 
   &-close {
@@ -67,12 +68,14 @@
 
   &-items {
     padding: var(--padding-xs);
+    margin-bottom: 0px;
   }
 
   &-item {
     font-size: var(--fs-xs);
     border-radius: var(--radius-rg);
-    padding: var(--padding-xs) var(--padding-xs);
+    padding: var(--padding-sm) var(--padding-xs);
+    margin: 1px 0px;
 
     &:focus-visible,
     &-label:focus-visible {
@@ -92,7 +95,7 @@
     }
 
     &.p-highlight {
-      background-color: transparent;
+      background-color: var(--primary-50);
     }
   }
 

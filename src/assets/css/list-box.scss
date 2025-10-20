@@ -22,8 +22,18 @@
   }
 
   &-item {
+    &:not(:first-child, :last-child) {
+      margin: 1px 0px;
+    }
+
+    user-select: none;
     border-radius: var(--radius-rg);
     overflow: hidden;
     padding: var(--padding-rg) var(--padding-md);
+
+    &.p-focus {
+      box-shadow: none;
+      border-radius: var(--radius-rg);
+    }
   }
 }

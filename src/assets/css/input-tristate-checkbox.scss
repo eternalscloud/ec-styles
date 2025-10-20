@@ -1,0 +1,14 @@
+.p-tristatecheckbox {
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &.p-highlight {
+    > .p-checkbox-box {
+      border-color: var(--primary-600);
+      background-color: var(--primary-600);
+    }
+  }
+}

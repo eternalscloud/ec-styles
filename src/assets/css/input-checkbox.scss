@@ -20,6 +20,10 @@
       background-color: var(--primary-600);
     }
   }
+
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 input[type='checkbox'] {

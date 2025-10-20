@@ -1,6 +1,6 @@
 {
-  "name": "@eternaljs/styles",
-  "version": "0.0.3",
+  "name": "@eternals/styles",
+  "version": "0.0.1",
   "description": "A comprehensive design system and styling package for Eternals JS applications. Features complete color palettes, typography system, spacing utilities, theming capabilities, and modern CSS custom properties.",
   "type": "module",
   "main": "dist/index.js",
@@ -8,6 +8,14 @@
   "types": "dist/index.d.ts",
   "style": "dist/index.css",
   "scss": "src/index.scss",
+  "scripts": {
+    "build": "vite build",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,json}\"",
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,scss,json}\"",
+    "prepublishOnly": "npm run build",
+    "unpublish": "npm unpublish -f @eternals/styles",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -23,14 +31,6 @@
     "README.md",
     "LICENSE"
   ],
-  "scripts": {
-    "build": "vite build",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,json}\"",
-    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,scss,json}\"",
-    "prepublishOnly": "npm run build",
-    "unpublish": "npm unpublish -f @eternaljs/styles",
-    "test": "echo \"No tests specified\" && exit 0"
-  },
   "keywords": [
     "css",
     "scss",

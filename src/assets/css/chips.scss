@@ -1,16 +1,17 @@
 .p-chips {
-  &-multiple-container {
-    padding: var(--padding-xs);
+  & > .p-inputtext {
+    padding: 2.5px var(--padding-sm);
+    margin: 0px;
   }
 
   &-token {
-    background-color: var(--primary-200);
+    background-color: var(--primary-100);
     color: var(--primary-600);
     border-radius: var(--radius-md);
     cursor: pointer;
     transition: all 0.3s ease;
     outline: none;
-    padding: var(--padding-xxs) var(--padding-xs);
+    padding: var(--padding-xxs) var(--padding-sm);
     margin: 1px;
     font-size: var(--fs-xs);
 
@@ -31,5 +32,13 @@
 
   &-input-token {
     padding: var(--padding-xs);
+
+    input[type='text'] {
+      &::placeholder {
+        font-size: var(--fs-xs);
+        color: var(--gray-400);
+        user-select: none;
+      }
+    }
   }
 }
