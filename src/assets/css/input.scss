@@ -1,0 +1,42 @@
+.ec-input {
+  &-group {
+    width: 100%;
+
+    > .p-inputtext {
+      width: 100%;
+    }
+
+    > .p-inputnumber {
+      width: 100%;
+    }
+
+    > .p-calendar {
+      width: 100%;
+    }
+  }
+
+  &-error {
+    height: 14px;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-medium);
+    color: var(--red-500);
+  }
+}
+
+.ec-label {
+  display: block;
+  user-select: none;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  margin-bottom: var(--margin-xxs);
+}
+
+.ec-label-required {
+  @extend .ec-label;
+
+  &::after {
+    content: '*';
+    margin-left: var(--margin-xs);
+    font-weight: bold;
+  }
+}

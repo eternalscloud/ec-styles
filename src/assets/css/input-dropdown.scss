@@ -10,6 +10,7 @@
   }
 
   &-label {
+    font-size: var(--fs-xs);
     padding: var(--padding-rg) var(--padding-md);
 
     &.p-inputtext {
@@ -77,8 +78,10 @@
 
   &-item {
     font-size: var(--fs-xs);
-    border-radius: var(--radius-rg);
+    border-radius: var(--radius-md);
     padding: var(--padding-sm);
+    user-select: none;
+    margin: 1px 0px;
 
     &:focus-visible,
     &-label:focus-visible {
@@ -98,7 +101,8 @@
     }
 
     &.p-highlight {
-      background-color: transparent;
+      color: var(--white-color);
+      background-color: var(--primary-500);
     }
   }
 }

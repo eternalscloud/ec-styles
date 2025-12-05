@@ -1,0 +1,23 @@
+.p-breadcrumb {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  border: 0px;
+  background-color: transparent;
+  border-radius: 0px;
+
+  &-list {
+    margin: 0;
+    padding: 0;
+
+    > .p-menuitem-separator {
+      padding: 0px var(--padding-xxs);
+      color: var(--gray-400);
+
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}

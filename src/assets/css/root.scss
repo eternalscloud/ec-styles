@@ -23,9 +23,29 @@
 @use 'badge.scss';
 @use 'toggle-button.scss';
 @use 'overrides.scss';
+@use 'input.scss';
+@use 'animation.scss';
+@use 'breadcrumb.scss';
+@use 'dialog.scss';
+@use 'datatable.scss';
 
 :root {
+  --white-color: #ffffff;
+  --white-color-50: #fafafa;
+  --white-color-100: #f5f5f5;
+  --white-color-200: #e5e5e5;
+  --white-color-300: #d4d4d4;
+
+  --black-color: #000000;
+  --black-color-50: #404040;
+  --black-color-100: #262626;
+  --black-color-200: #171717;
+  --black-color-300: #0a0a0a;
+
+  --background: #f9f9ff;
+
   --footer-width: 240px;
+  --auth-container: 300px;
 
   --padding-xxs: 2px;
   --padding-xs: 4px;
@@ -99,12 +119,24 @@
   --radius-circle: 50%;
 
   --shadow: 0 0px 1px 0.5px rgb(0 0 0 / 0.18);
-  --shadow-xxs: 0 1px rgb(0 0 0 / 0.05);
-  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-sd: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  --shadow-rg: 0 1px 6px 0 rgb(0 0 0 / 0.18);
+  --shadow-xxs: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  --shadow-xs: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --shadow-sm: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --shadow-md: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  --shadow-lg: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-xl: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  --shadow-none: 0 0 #0000;
+
+  --shadow-xxs: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  --shadow-xs: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --shadow-sm: rgba(0, 0, 0, 0.26) 0px 0px 4px;
+  --shadow-md: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  --shadow-lg: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-xl: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  --shadow-2xl: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  --shadow-3xl: 0 1px 6px 0 rgb(0 0 0 / 0.18);
+  --shadow-4xl: 0 0px 1px 0.5px rgb(0 0 0 / 0.18);
   --shadow-none: 0 0 #0000;
 }

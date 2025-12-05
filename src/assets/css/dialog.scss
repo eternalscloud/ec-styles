@@ -1,0 +1,28 @@
+.p-dialog {
+  margin: var(--margin-xl);
+
+  &-header {
+    padding: var(--padding-rg);
+    border-bottom: 1px solid var(--gray-200);
+
+    &-close {
+      border-radius: var(--radius-md);
+
+      &:focus-visible {
+        outline: 0;
+        box-shadow: none;
+      }
+
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  &-title {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--black-color);
+  }
+}

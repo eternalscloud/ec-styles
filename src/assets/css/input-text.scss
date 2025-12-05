@@ -2,6 +2,7 @@
   padding: var(--padding-rg) var(--padding-md);
   border-radius: var(--radius-md);
   border: 1px solid var(--gray-200);
+  font-size: var(--fs-xs);
 
   &::placeholder {
     color: var(--gray-400);
@@ -21,6 +22,13 @@
     transition:
       border-color 0.15s ease-in-out,
       box-shadow 0.15s ease-in-out;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-background-clip: text;
   }
 
   &.p-disabled {

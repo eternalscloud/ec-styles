@@ -39,3 +39,15 @@ input[type='checkbox'] {
     outline: none;
   }
 }
+
+.p-checkbox:not(.p-disabled):has(.p-checkbox-input:focus-visible) .p-checkbox-box {
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--primary-600) 25%, transparent);
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.p-checkbox:not(.p-disabled):has(.p-checkbox-input:hover) .p-checkbox-box {
+  border-color: var(--primary-600);
+}

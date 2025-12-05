@@ -1,7 +1,12 @@
+.ec-radio-button-group {
+  display: flex;
+  align-items: center;
+  gap: var(--margin-rg);
+}
+
 .p-input-radio-button {
   display: flex;
   align-items: center;
-  justify-content: center;
   border: 1px solid var(--gray-200);
   border-radius: var(--radius-md);
   padding: var(--padding-rg) var(--padding-md);
@@ -29,6 +34,8 @@
 
   > label {
     cursor: pointer;
+    user-select: none;
+    font-weight: var(--fw-medium);
     margin-left: var(--margin-sm);
   }
 }

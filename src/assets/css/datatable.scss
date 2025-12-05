@@ -1,0 +1,27 @@
+.p-datatable {
+  &-thead {
+    background-color: var(--gray-100);
+    color: var(--gray-500);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-medium);
+
+    > tr > th {
+      font-size: var(--fs-sm);
+      padding: var(--padding-sm) var(--padding-md);
+      font-weight: var(--fw-medium);
+    }
+
+    // .p-column-title {
+    //     font-weight: var(--fw-medium);
+    // }
+  }
+
+  &-tbody {
+    > tr > td {
+      padding: var(--padding-sm) var(--padding-md);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-regular);
+      color: var(--gray-500);
+    }
+  }
+}

@@ -37,6 +37,7 @@
   }
 
   &-label {
+    font-weight: var(--fw-medium);
     text-decoration: none;
   }
 
@@ -303,6 +304,24 @@
     :not(:first-child) {
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0px;
+    }
+  }
+
+  &-icon {
+    &-left {
+      margin-right: var(--margin-xs);
+    }
+
+    &-right {
+      margin-left: var(--margin-xs);
+    }
+  }
+
+  &-sm {
+    padding: var(--padding-xs) var(--padding-sm);
+
+    svg {
+      vertical-align: middle;
     }
   }
 }

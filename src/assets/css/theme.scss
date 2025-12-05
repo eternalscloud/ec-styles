@@ -1,15 +1,13 @@
 [ec-app-theme='light'] {
-  --background: var(--white-color);
-  --foreground: var(--white-color);
-
-  --color: var(--neutral-600);
-  --radius: var(--radius-md);
+  --color: #202020;
+  --foreground: #ffffff;
+  --background: #f9f9ff;
 }
 
 [ec-app-theme='dark'] {
-  --color: var(--neutral-lightgray);
-  --background: var(--neutral-600);
-  --foreground: var(--neutral-500);
+  --color: #f4f4f4;
+  --foreground: #151515;
+  --background: #0d0d0d;
 }
 
 [ec-app-color='neutral'] {
