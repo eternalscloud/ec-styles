@@ -20,6 +20,7 @@
     font-size: var(--fs-xs);
     font-weight: var(--fw-medium);
     color: var(--red-500);
+    margin: var(--margin-xxs) 0px;
   }
 }
 
@@ -28,7 +29,7 @@
   user-select: none;
   font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
-  margin-bottom: var(--margin-xxs);
+  margin-bottom: var(--margin-xs);
 }
 
 .ec-label-required {

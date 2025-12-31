@@ -10,7 +10,7 @@
   }
 
   &-list {
-    padding: 0px;
+    padding: var(--padding-xxs);
     margin: var(--margin-xxs);
     overflow: hidden;
 
@@ -23,17 +23,26 @@
 
   &-item {
     &:not(:first-child, :last-child) {
-      margin: 1px 0px;
+      margin: var(--margin-xxs) 0px;
     }
 
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
     user-select: none;
     border-radius: var(--radius-rg);
     overflow: hidden;
-    padding: var(--padding-rg) var(--padding-md);
+    padding: var(--padding-sm) var(--padding-md);
 
     &.p-focus {
       box-shadow: none;
       border-radius: var(--radius-rg);
+    }
+
+    &.p-highlight {
+      box-shadow: none;
+      border-radius: var(--radius-rg);
+      color: var(--white-color);
+      background-color: var(--primary-500);
     }
   }
 }

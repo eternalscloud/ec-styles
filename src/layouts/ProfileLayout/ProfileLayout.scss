@@ -1,0 +1,35 @@
+.profile-layout {
+  width: 100%;
+  min-height: 100%;
+  height: unset;
+
+  &-container {
+    height: 100%;
+    width: 100%;
+    margin: 0px auto;
+  }
+
+  &-header {
+    background-color: var(--white-color);
+    padding: var(--padding-sm) var(--padding-sm) var(--padding-sm) var(--padding-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    margin-bottom: var(--margin-sm);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-title {
+      font-size: var(--fs-md);
+      font-weight: var(--fw-semibold);
+      color: var(--primary-500);
+    }
+
+    &-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: var(--margin-sm);
+    }
+  }
+}

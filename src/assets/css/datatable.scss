@@ -6,14 +6,11 @@
     font-weight: var(--fw-medium);
 
     > tr > th {
-      font-size: var(--fs-sm);
+      font-size: var(--fs-xs);
       padding: var(--padding-sm) var(--padding-md);
       font-weight: var(--fw-medium);
+      border-bottom: 1px solid var(--gray-200);
     }
-
-    // .p-column-title {
-    //     font-weight: var(--fw-medium);
-    // }
   }
 
   &-tbody {
