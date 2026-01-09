@@ -44,7 +44,12 @@
 
   --background: #f9f9ff;
 
-  --footer-width: 240px;
+  --sidebar-expanded: 240px;
+  --sidebar-minimized: 53px;
+  --sidebar-header-logo: 32px;
+  --sidebar-header-padding: 10px;
+  --sidebar-menu-icon: 32px;
+
   --auth-container: 300px;
 
   --padding-xxs: 2px;
@@ -118,25 +123,40 @@
   --radius-5xl: 2.5rem;
   --radius-circle: 50%;
 
-  --shadow: 0 0px 1px 0.5px rgb(0 0 0 / 0.18);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-sd: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   --shadow-rg: 0 1px 6px 0 rgb(0 0 0 / 0.18);
   --shadow-xxs: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   --shadow-xs: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  --shadow-sm: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  --shadow-md: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  --shadow-lg: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-xl: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  --shadow-none: 0 0 #0000;
-
-  --shadow-xxs: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  --shadow-xs: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   --shadow-sm: rgba(0, 0, 0, 0.26) 0px 0px 4px;
   --shadow-md: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  --shadow-lg: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 0px 1px 0.5px rgb(0 0 0 / 0.18);
   --shadow-xl: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   --shadow-2xl: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   --shadow-3xl: 0 1px 6px 0 rgb(0 0 0 / 0.18);
   --shadow-4xl: 0 0px 1px 0.5px rgb(0 0 0 / 0.18);
   --shadow-none: 0 0 #0000;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray-200);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gray-300);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-200) transparent;
 }

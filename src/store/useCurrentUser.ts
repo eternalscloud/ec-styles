@@ -1,40 +1,25 @@
 // import moment from 'moment-timezone';
 // import { create } from 'zustand';
-// import { getMeUser } from '../services/auth.service';
 // import type { IUser } from '../pages/Auth/Profile/Profile.interface';
+// import { getMeUser } from '../services/auth.service';
 
 // const requestStatus = { status: false };
 
-// export interface IAction {
-//   label: string;
-//   onClick: (data?: any) => any;
-//   disabled: boolean;
-//   loading: boolean;
-//   outlined?: boolean;
-// }
-
 // export interface ICurrentUser {
 //   currentUser: IUser | null;
-//   title: string;
-//   actions: IAction[];
-//   setCurrentUser: (currentUser: IUser) => void;
-//   setTitle: (title: string) => void;
-//   setActions: (actions: IAction[]) => void;
+//   setCurrentUser: (force?: boolean) => void;
 // }
 
-// const useCurrentUser = create<ICurrentUser>((set) => ({
+// const useCurrentUser = create<ICurrentUser>((set, get) => ({
 //   currentUser: null,
-//   title: '',
-//   actions: [],
-//   setCurrentUser: (currentUser: IUser) => set({ currentUser }),
-//   setTitle: (title: string) => set({ title }),
-//   setActions: (actions: IAction[]) => set({ actions }),
+//   setCurrentUser: async (force: boolean = false) => {
+//     getCurrentUser(get, set, force);
+//   },
 // }));
 
-// const dispatchCurrentUser = async (force: boolean = false) => {
+// const getCurrentUser = async (get: () => Partial<ICurrentUser>, set: (state: Partial<ICurrentUser>) => void, force: boolean = false) => {
 //   try {
-//     const { currentUser, setCurrentUser } = useCurrentUser.getState();
-//     if (!force && (currentUser?.username || requestStatus.status)) return;
+//     if (!force && (get()?.currentUser?.username || requestStatus.status)) return;
 //     requestStatus.status = true;
 //     const res = await getMeUser();
 //     if (!res?.data?.username) {
@@ -45,11 +30,11 @@
 //       res['data']['age'] = moment().diff(dateOfBirthMoment, 'years');
 //       res['data']['date_of_birth'] = dateOfBirthMoment.format('DD MMMM YYYY');
 //     }
-//     setCurrentUser(res.data);
+//     set({ currentUser: res.data });
 //   } catch (error) {
 //     requestStatus.status = false;
 //     console.error(error);
 //   }
 // };
 
-// export { dispatchCurrentUser, useCurrentUser };
+// export default useCurrentUser;

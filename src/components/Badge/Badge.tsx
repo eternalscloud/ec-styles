@@ -1,7 +1,7 @@
 import { classNames } from 'primereact/utils';
 import './Badge.scss';
 
-type TSeverity = 'pending' | 'confirmed' | 'denied' | 'hold' | 'warning' | 'primary';
+export type TSeverity = 'pending' | 'confirmed' | 'denied' | 'hold' | 'warning' | 'primary';
 
 interface IBadgeIcon {
   icon: string;
@@ -15,6 +15,7 @@ interface IBadgeOptions {
   severity: TSeverity;
   badge: IBadge;
   onClick?: () => void;
+  className?: string;
 }
 
 interface IBadgeSplitOptions extends Omit<IBadgeOptions, 'badge'> {
@@ -39,7 +40,7 @@ function BadgeSolid(options: IBadgeOptions) {
   const badgeID = `ec-badge-${options.severity}-${options.badge.title}`;
 
   return (
-    <div className={`ec-badge-solid-${options.severity}`} id={badgeID} onClick={options?.onClick}>
+    <div className={classNames(`ec-badge-solid-${options.severity}`, options?.className)} id={badgeID} onClick={options?.onClick}>
       {options?.badge?.icon && iconPosition === 'start' && <BadgeIcon icon={options.badge.icon} iconPosition={iconPosition} />}
       {options?.badge?.title && <div className="ec-badge-title">{options.badge.title}</div>}
       {options?.badge?.icon && iconPosition === 'end' && <BadgeIcon icon={options.badge.icon} iconPosition={iconPosition} />}
@@ -52,7 +53,7 @@ function BadgeLight(options: IBadgeOptions) {
   const badgeID = `ec-badge-${options.severity}-${options.badge.title}`;
 
   return (
-    <div className={`ec-badge-light-${options.severity}`} id={badgeID} onClick={options?.onClick}>
+    <div className={classNames(`ec-badge-light-${options.severity}`, options?.className)} id={badgeID} onClick={options?.onClick}>
       {options?.badge?.icon && iconPosition === 'start' && <BadgeIcon icon={options.badge.icon} iconPosition={iconPosition} />}
       {options?.badge?.title && <div className="ec-badge-title">{options.badge.title}</div>}
       {options?.badge?.icon && iconPosition === 'end' && <BadgeIcon icon={options.badge.icon} iconPosition={iconPosition} />}
@@ -65,7 +66,7 @@ function BadgeOutline(options: IBadgeOptions) {
   const badgeID = `ec-badge-${options.severity}-${options.badge.title}`;
 
   return (
-    <div className={`ec-badge-outline-${options.severity}`} id={badgeID} onClick={options?.onClick}>
+    <div className={classNames(`ec-badge-outline-${options.severity}`, options?.className)} id={badgeID} onClick={options?.onClick}>
       {options?.badge?.icon && iconPosition === 'start' && <BadgeIcon icon={options.badge.icon} iconPosition={iconPosition} />}
       {options?.badge?.title && <div className="ec-badge-title">{options.badge.title}</div>}
       {options?.badge?.icon && iconPosition === 'end' && <BadgeIcon icon={options.badge.icon} iconPosition={iconPosition} />}
@@ -78,7 +79,7 @@ function BadgeLink(options: IBadgeOptions) {
   const badgeID = `ec-badge-${options.severity}-${options.badge.title}`;
 
   return (
-    <div className={`ec-badge-link-${options.severity}`} id={badgeID} onClick={options?.onClick}>
+    <div className={classNames(`ec-badge-link-${options.severity}`, options?.className)} id={badgeID} onClick={options?.onClick}>
       {options?.badge?.icon && iconPosition === 'start' && <BadgeIcon icon={options.badge.icon} iconPosition={iconPosition} />}
       {options?.badge?.title && <div className="ec-badge-title">{options.badge.title}</div>}
       {options?.badge?.icon && iconPosition === 'end' && <BadgeIcon icon={options.badge.icon} iconPosition={iconPosition} />}
@@ -89,7 +90,7 @@ function BadgeLink(options: IBadgeOptions) {
 function BadgePreset(options: IBadgeOptions) {
   const badgeID = `ec-badge-${options.severity}-${options.badge.title}`;
   return (
-    <div className={`ec-badge-preset-${options.severity}`} id={badgeID} onClick={options?.onClick}>
+    <div className={classNames(`ec-badge-preset-${options.severity}`, options?.className)} id={badgeID} onClick={options?.onClick}>
       {options?.badge?.title && <div className="ec-badge-title">{options.badge.title}</div>}
     </div>
   );
@@ -101,7 +102,7 @@ function BadgeSplit(options: IBadgeSplitOptions) {
   const badgeID = `ec-badge-${options.severity}-${options.badge.label}`;
   const badgeClass = `ec-badge-split-${options.severity}`;
   return (
-    <div className={badgeClass} id={badgeID} onClick={options?.onClick}>
+    <div className={classNames(badgeClass, options?.className)} id={badgeID} onClick={options?.onClick}>
       <div className={classNames('ec-badge-split-label', `${badgeClass}-label`)}>
         {options?.badge?.labelIcon?.icon && iconPositionLabel === 'start' && <BadgeIcon icon={options.badge.labelIcon.icon} iconPosition={iconPositionLabel} />}
         {options?.badge?.label && <div className="ec-badge-title">{options.badge.label}</div>}

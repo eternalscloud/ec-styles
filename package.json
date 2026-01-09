@@ -1,6 +1,6 @@
 {
   "name": "@eternaljs/styles",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A comprehensive design system and styling package for Eternals JS applications. Features complete color palettes, typography system, spacing utilities, theming capabilities, and modern CSS custom properties.",
   "type": "module",
   "main": "dist/index.js",

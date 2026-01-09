@@ -8,14 +8,15 @@ import * as GrIcons from 'react-icons/gr';
 import * as RiIcons from 'react-icons/ri';
 import * as LiaIcons from 'react-icons/lia';
 import * as IoIcons from 'react-icons/io';
-import * as HiIcons from 'react-icons/hi2';
+import * as Hi2Icons from 'react-icons/hi2';
+import * as HiIcons from 'react-icons/hi';
 import * as TbIcons from 'react-icons/tb';
 import * as Fa6Icons from 'react-icons/fa6';
 
 import type { IconType } from 'react-icons';
 import type { MouseEvent } from 'react';
 
-export type IconLibrary = 'fa' | 'lu' | 'md' | 'bs' | 'ai' | 'cg' | 'gr' | 'ri' | 'lia' | 'io' | 'hi' | 'tb' | 'fa6';
+export type IconLibrary = 'fa' | 'lu' | 'md' | 'bs' | 'ai' | 'cg' | 'gr' | 'ri' | 'lia' | 'io' | 'hi' | 'hi2' | 'tb' | 'fa6';
 
 interface IconProps {
   name: string;
@@ -48,6 +49,8 @@ export default function Icon(icon: IconProps) {
     IconComponent = (IoIcons as Record<string, IconType>)[icon.name];
   } else if (icon.library === 'hi') {
     IconComponent = (HiIcons as Record<string, IconType>)[icon.name];
+  } else if (icon.library === 'hi2') {
+    IconComponent = (Hi2Icons as Record<string, IconType>)[icon.name];
   } else if (icon.library === 'tb') {
     IconComponent = (TbIcons as Record<string, IconType>)[icon.name];
   } else if (icon.library === 'fa6') {

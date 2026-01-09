@@ -1,3 +1,4 @@
+// import { userLogout } from '../../services/auth.service';
 // import { ROUTER } from '../../utils/routers';
 // import type { IMenu } from './Sidebar.interface';
 
@@ -5,23 +6,16 @@
 //   {
 //     key: 'dashboard',
 //     name: 'Dashboard',
-//     icon: 'MdDashboard',
-//     iconLibrary: 'md',
+//     icon: 'RiDashboardHorizontalFill',
+//     iconLibrary: 'ri',
 //     url: ROUTER['dashboard']['url'],
 //   },
 //   {
-//     key: 'profile',
-//     name: 'Profile',
-//     icon: 'LuUserRoundCog',
-//     iconLibrary: 'lu',
-//     url: ROUTER['profile']['url'],
-//   },
-//   {
-//     key: 'settings',
-//     name: 'Settings',
-//     icon: 'LuSettings',
-//     iconLibrary: 'lu',
-//     url: ROUTER['settings']['url'],
+//     key: 'client',
+//     name: 'Client',
+//     icon: 'MdAccountTree',
+//     iconLibrary: 'md',
+//     url: ROUTER['client']['url'],
 //   },
 // ];
 
@@ -33,17 +27,18 @@
 //     iconLibrary: 'lu',
 //     url: ROUTER['profile']['url'],
 //   },
-//   {
-//     key: 'settings',
-//     name: 'Settings',
-//     icon: 'LuSettings',
-//     iconLibrary: 'lu',
-//     url: ROUTER['settings']['url'],
-//   },
+//   // {
+//   //   key: 'settings',
+//   //   name: 'Settings',
+//   //   icon: 'LuSettings',
+//   //   iconLibrary: 'lu',
+//   //   url: ROUTER['settings']['url'],
+//   // },
 //   {
 //     key: 'logout',
 //     name: 'Logout',
 //     icon: 'LuLogOut',
 //     iconLibrary: 'lu',
+//     action: () => userLogout(),
 //   },
 // ];

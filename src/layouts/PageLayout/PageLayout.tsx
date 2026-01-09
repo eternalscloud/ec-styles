@@ -30,7 +30,7 @@
 
 //   useEffect(() => {
 //     getLiveInfo();
-//   }, []);
+//   }, []); // run once on mount
 
 //   useEffect(() => {
 //     if (WHITE_BG_PAGES.includes(location.pathname)) {
@@ -68,11 +68,11 @@
 //                         disabled={action.disabled}
 //                         outlined={action.outlined}
 //                       />
-//                     ) : (
-//                       <div className="app-page-content-header-actions-icon">
-//                         <Icon name={action.icon as string} library={action.iconLibrary as IconLibrary} onClick={action.onClick} />
+//                     ) : action.icon ? (
+//                       <div key={action.label} className="app-page-content-header-actions-icon" onClick={action.onClick}>
+//                         <Icon name={action.icon as string} library={action.iconLibrary as IconLibrary} />
 //                       </div>
-//                     )
+//                     ) : null
 //                   )}
 //                 </div>
 //               </div>
